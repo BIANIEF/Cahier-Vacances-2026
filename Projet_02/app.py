@@ -5,11 +5,11 @@ import joblib
 from utils import get_current_form
 
 # Charger les données
-df = pd.read_csv("data/results.csv")
+df = pd.read_csv("Projet_02/data/results.csv")
 
 # Charger le modèle et le scaler
-model = joblib.load("model.pkl")
-scaler = joblib.load("scaler.pkl")
+model = joblib.load("Projet_02/model.pkl")
+scaler = joblib.load("Projet_02/scaler.pkl")
 
 FEATURES = [
     "diff_avg_points",
