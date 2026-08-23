@@ -1,0 +1,2 @@
+Projet_02/model.pkl filter=lfs diff=lfs merge=lfs -text
+Projet_02/scaler.pkl filter=lfs diff=lfs merge=lfs -text
