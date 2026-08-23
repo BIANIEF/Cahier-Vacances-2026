@@ -1,15 +1,20 @@
 import streamlit as st
 import pandas as pd
 import joblib
-
+from pathlib import Path
 from utils import get_current_form
 
+BASE_DIR = Path(__file__).resolve().parent
+
 # Charger les données
-df = pd.read_csv("Projet_02/data/results.csv")
+df = pd.read_csv(BASE_DIR / "data" / "results.csv")
 
 # Charger le modèle et le scaler
-model = joblib.load("Projet_02/model.pkl")
-scaler = joblib.load("Projet_02/scaler.pkl")
+
+model = joblib.load(BASE_DIR / "model.pkl")
+
+scaler = joblib.load(BASE_DIR / "scaler.pkl")
+
 
 FEATURES = [
     "diff_avg_points",
